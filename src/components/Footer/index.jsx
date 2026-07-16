@@ -12,7 +12,6 @@ const Footer = () => {
         <div>
           <h2 className='text-lg font-semibold mb-4 tracking-wide'>Contact Us</h2>
           <ul className='space-y-2 text-sm text-gray-300'>
-            <li>(+92) 348 0700724</li>
             <li>wearsalif@gmail.com</li>
             <li>Faisalabad, Punjab, Pakistan</li>
           </ul>

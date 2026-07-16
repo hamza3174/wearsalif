@@ -180,22 +180,7 @@ const Contact = () => {
                   Email
                 </h3>
                 <p className='text-sm md:text-base text-gray-600 leading-relaxed break-all'>
-                  wearsalifs@gmail.com
-                </p>
-              </div>
-            </div>
-
-            {/* Phone */}
-            <div className='flex items-start gap-4 md:gap-5'>
-              <div className='w-12 h-12 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center text-xl md:text-2xl shadow-sm shrink-0'>
-                <FiPhone />
-              </div>
-              <div>
-                <h3 className='text-lg md:text-xl font-semibold mb-1 md:mb-2 text-[#1A1A1A]'>
-                  Phone
-                </h3>
-                <p className='text-sm md:text-base text-gray-600 leading-relaxed'>
-                  +92 348 0700744
+                  wearsalif@gmail.com
                 </p>
               </div>
             </div>
