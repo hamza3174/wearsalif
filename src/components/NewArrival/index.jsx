@@ -72,6 +72,16 @@ const NewArrival = () => {
   // Track active product modal/info popover for Care & Disclaimers
   const [activePopover, setActivePopover] = useState(null);
 
+  // Reusable generic care instructions for products 2-14
+  const standardCareInstructions = [
+    "Cold gentle wash",
+    "Use mild detergent",
+    "Do not bleach",
+    "Dry in shade",
+    "Iron on low heat",
+    "Wash similar colors together",
+  ];
+
   const products = [
     {
       id: 1,
@@ -91,8 +101,15 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: [
+        "Cold gentle wash",
+        "Use mild detergent",
+        "Do not bleach",
+        "Dry in shade",
+        "Iron on low heat",
+        "Wash similar colors together",
+      ],
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 2,
@@ -112,8 +129,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 3,
@@ -133,8 +150,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 4,
@@ -154,8 +171,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 5,
@@ -175,8 +192,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 6,
@@ -196,8 +213,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 7,
@@ -217,8 +234,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 8,
@@ -238,8 +255,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 9,
@@ -259,8 +276,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 10,
@@ -280,8 +297,8 @@ const NewArrival = () => {
         "Premium Digital Printed Dobby Voile Dupatta",
         "Comfort Dyed Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 11,
@@ -300,8 +317,8 @@ const NewArrival = () => {
         "Premium Printed Lawn",
         "Premium Printed Lawn Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 12,
@@ -320,8 +337,8 @@ const NewArrival = () => {
         "Premium Printed Cotton",
         "Premium Printed Cotton Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 13,
@@ -340,8 +357,8 @@ const NewArrival = () => {
         "Premium Printed Lawn",
         "Premium Printed Lawn Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     },
     {
       id: 14,
@@ -360,8 +377,8 @@ const NewArrival = () => {
         "Premium Printed Lawn",
         "Premium Printed Lawn Trouser",
       ],
+      Careinstruction: standardCareInstructions,
       disclaimer: "Actual product color may vary slightly from the image",
-
     }
   ];
 
@@ -464,7 +481,7 @@ const NewArrival = () => {
                       <CiMemoPad size={16} /> Care Instructions
                     </h4>
                     <ul className="text-[10px] sm:text-xs text-gray-300 space-y-1 list-disc list-inside">
-                      {product.Careinstruction.map((instruction, index) => (
+                      {product.Careinstruction?.map((instruction, index) => (
                         <li key={index}>{instruction}</li>
                       ))}
                     </ul>
